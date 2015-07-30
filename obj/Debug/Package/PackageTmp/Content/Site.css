@@ -1,0 +1,70 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+   background: url('/images/background.png');
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 110px;
+  margin-top: 30px;
+  background-color: white;
+}
+/*Banner for all pages*/
+#titlebanner {
+  background: url(/images/titlebanner.png);
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  left: 0px;
+  margin-top: -110px;
+}
+#titlewrap {
+  margin: auto;
+  width: 980px;
+  padding-top: 5px;
+}
+.logo {
+    float:left;
+    width:200px;
+}
+#titlewrap h2 {
+    font-size:32px;
+    color:white;
+}
+/*The Front Page 3 Icons*/
+.boximage{
+    padding:10px;
+    width:300px;
+}
+/*banner image*/
+#networkimage {
+    width:100%;
+    margin-top:-80px;
+}
+/*Login and Register font need to be smaller and dynamic to the overall navbar*/
+#registerLink{
+    font-size:1.6em;
+}
+#loginLink{
+    font-size:1.6em;
+}
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+button a{
+    color:white;
+}

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<tetherFinal.Models.Cart>
+
+
+
+<div id="titlebanner">
+    <div id="titlewrap">
+        <h2>Cart</h2>
+    </div>
+</div>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+       
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+               
+                <button type="button" class="btn btn-danger"> @Html.ActionLink("Remove", "Delete", new { id = item.ID }) </button>
+            </td>
+        </tr>
+    }
+   
+
+        <tr>
+
+            <td>
+               Cost Before Tax:                     
+                
+                </td>
+           <td>
+            @{
+                @Html.Raw(ViewData["total"]);
+                                                double to = (double)ViewData["total"];
+
+            }
+               <button type="button" class="btn btn-success">  @Html.ActionLink("Checkout", "index", new {clear =" clear"  }) </button>
+            </td>
+        </tr>
+
+
+    </table>
+
